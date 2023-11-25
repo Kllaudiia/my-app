@@ -1,0 +1,112 @@
+.registerForm {
+    max-width: 400px;
+    height: 80vh;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff75;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    animation: slideInDown 0.5s ease-in-out; /* Slide-in from the top animation */
+  }
+  
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 15px;
+    padding-left: 5px;
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation for form elements */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+    padding-left: 5px;
+    font-weight: bold;
+    color: #333;
+    animation: slideInLeft 0.5s ease-in-out; /* Slide-in from the left animation */
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out; /* Smooth border color transition */
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #354a35; /* Highlight border color on focus */
+  }
+  .icon {
+    margin-right: 5px; /* Adjust the value to your preference */
+  }
+  
+  p {
+    color: #b03737;
+    margin-top: 5px;
+    font-size: 14px;
+    background-color: #ecb6ae;
+  }
+  
+  input[type="submit"] {
+    background-color: #5c775d;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #4b664e;
+  }

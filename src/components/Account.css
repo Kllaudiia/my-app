@@ -1,0 +1,28 @@
+.account-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1, h2 {
+    color: #333;
+  }
+  
+  .user-info {
+    margin-bottom: 20px;
+  }
+  
+  .user-info p {
+    margin: 5px 0;
+  }
+  
+  form {
+    margin-top: 15px;
+  }
+  
+  .user-votings, .participated-votings {
+    margin-top: 20px;
+  }
+  
+ 
