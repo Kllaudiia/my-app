@@ -1,7 +1,25 @@
-import React from 'react';
-import './Main.css'; // Import your CSS file for styling
+import React, { useEffect, useState } from 'react';
+import './Main.css';
 
 export default function Main() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="main-container">
 
@@ -9,7 +27,7 @@ export default function Main() {
         <img src="/images/podawanie_reki.jpg" alt="Welcoming Image" />
         <div className="welcoming-text">
           <h1>Want to find out what your future clients need?</h1>
-          <h2>No more triall and error! With 'PickIt' you can ask and get an answer for free.</h2>
+          <h2>No more trial and error! With 'PickIt' you can ask and get an answer for free.</h2>
         </div>
       </div>
 
@@ -25,9 +43,19 @@ export default function Main() {
       </div>
 
       {/* Big Buttons */}
-      <div className="big-buttons">
-        <button className="add-voting-button">Add a Voting</button>
-        <button className="take-part-button">Take Part in Voting</button>
+      <div className={`big-buttons ${isVisible ? 'visible' : ''}`}>
+        <div className="button-container">
+          <div className="big-button add-voting-button">
+            <img src="/images/add-icon.png" alt="Add Voting Icon" />
+            <p>Add a Voting</p>
+          </div>
+        </div>
+        <div className="button-container">
+          <div className="big-button take-part-button">
+            <img src="/images/participate-icon.png" alt="Participate Icon" />
+            <p>Take Part in Voting</p>
+          </div>
+        </div>
       </div>
     </div>
   );

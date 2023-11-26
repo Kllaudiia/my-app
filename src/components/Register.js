@@ -15,7 +15,7 @@ export default function Register() {
         <div className = 'registerForm'>
           <h1>Register:</h1>
           
-          <a href='/login'> Already registered? Log in.</a>
+          
           
         <form onSubmit={handleSubmit((data) => console.log(data))}>
           <ul >
@@ -48,8 +48,10 @@ export default function Register() {
                 {errors.password2 && <p>Passwords do not match.</p>}
             </li>
             <li>
+            
               <input type="submit" value="Register Now"/>
             </li>
+            <a href='/login'> Already registered? Log in.</a>
           </ul>
         </form>
         </div>

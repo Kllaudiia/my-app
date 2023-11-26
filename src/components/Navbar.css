@@ -1,0 +1,54 @@
+.nav {
+    background-color: #313c34;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+  }
+  
+  nav .menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  nav .menu span {
+    height: 0.4rem;
+    width: 2rem;
+    background-color: #fff;
+    margin: 0.3rem 0;
+    display: block;
+  }
+  
+  @media (max-width: 820px) {
+    nav .menu {
+      display: flex;
+    }
+  
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #313c34;
+    }
+  
+    .nav-list.open {
+      display: flex;
+    }
+  
+    .nav-list a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+    }
+  }
+  .site-title {
+    font-size: 2rem;
+    text-decoration: none;
+  }

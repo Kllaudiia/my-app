@@ -3,7 +3,7 @@
   background-color: rgb(255, 255, 255);
 }
 
-.nav {
+nav {
   background-color: #313c34;
   color: white;
   display: flex;
@@ -11,6 +11,46 @@
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
+  position: sticky;
+  top: 0;
+}
+
+nav .menu {
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+nav .menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #fff;
+}
+
+@media (max-width: 840px) {
+  nav .menu {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #313c34;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
 }
 
 .site-title {
@@ -26,19 +66,20 @@
   gap: 1rem;
   align-items: stretch;
 }
+
 .nav a {
   color: inherit;
   text-decoration: none;
   height: 100%;
   display: flex;
-  align-items: center; /* Center vertically */
+  align-items: center;
   padding: 0.25rem;
 }
 
 .nav li {
   display: flex;
-  align-items: center; /* Center vertically */
-  margin: 0 auto; /* Center horizontally */
+  align-items: center;
+  margin: 0 auto;
 }
 
 .App-logo {

@@ -9,7 +9,6 @@
     width: 100vw;
     max-height: 60vh;
     object-fit: cover;
-    margin-right: 20px;
     transition: filter 0.5s ease-in-out;
   }
   
@@ -66,10 +65,10 @@
   background-color: #4CAF50;
   color: #fff;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
 .take-part-button {
   background-color: #2196F3;
 }
+
